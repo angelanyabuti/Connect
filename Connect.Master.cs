@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Connect
 {
-    public partial class SiteMaster : MasterPage
+    public partial class Connect : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
