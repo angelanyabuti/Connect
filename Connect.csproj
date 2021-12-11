@@ -106,9 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="App_Data\Register.mdf" />
-    <Content Include="App_Data\Register_log.ldf">
-      <DependentUpon>Register.mdf</DependentUpon>
+    <Content Include="App_Data\Connect.mdf" />
+    <Content Include="App_Data\Connect_log.ldf">
+      <DependentUpon>Connect.mdf</DependentUpon>
     </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
