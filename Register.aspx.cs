@@ -30,7 +30,7 @@ namespace Connect
 
             //writing sql query
            
-            SqlCommand cmd = new SqlCommand("insert into Register (Id, First_name, Last_name, Email, Date_of_Birth, Username, Password, Confirm_password) values('"+txtid.Text+"','"+ txtfname.Text + "', '" + txtLname.Text + "','" + txtEmail.Text + "','" + txtDbirth.Text + "','" + txtUname.Text + "','" + txtfname.Text + "''" + txtPassword.Text + "','" + txtCPassword.Text + "')", conn);
+            SqlCommand cmd = new SqlCommand("insert into Register (Id, First_name, Last_name, Email, Date_of_Birth, Username, Password, Confirm_password) values('"+txtid.Text+"','"+ txtfname.Text + "', '" + txtLname.Text + "','" + txtEmail.Text + "','" + txtDbirth.Text + "','" + txtUname.Text + "','" + txtPassword.Text + "','" + txtCPassword.Text + "')", conn);
             
             // Opening Connection
             conn.Open();

@@ -18,31 +18,23 @@
     <br />
     <asp:Label ID="Label4" runat="server" Text="Date of Birth"></asp:Label>
     <asp:TextBox ID="txtDbirth" runat="server"></asp:TextBox>
-    <input id="Button2" type="button" value="..." onclick="onClick()" />
-    <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="134px" SelectedDate="12/03/2021 13:09:40" VisibleDate="2021-12-03" Width="182px">
-        <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
-        <NextPrevStyle VerticalAlign="Bottom" />
-        <OtherMonthDayStyle ForeColor="#808080" />
-        <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
-        <SelectorStyle BackColor="#CCCCCC" />
-        <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
-        <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
-        <WeekendDayStyle BackColor="#FFFFCC" />
-    </asp:Calendar>
+    &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtDbirth" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
     <br />
    
    
     <asp:Label ID="Label5" runat="server" Text="Username"></asp:Label>
     <asp:TextBox ID="txtUname" runat="server"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtUname" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
     <br />
     <asp:Label ID="Label6" runat="server" Text="Password"></asp:Label>
     <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPassword" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
     <br />
     <asp:Label ID="Label7" runat="server" Text="Confirm password"></asp:Label>
     <asp:TextBox ID="txtCPassword" runat="server"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtCPassword" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
+    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtCPassword" ErrorMessage="Enter the correct password" ForeColor="Red" ValidationGroup="vg">*</asp:CompareValidator>
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="vg" />
-    <asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
-    <br />
     <br />
     <asp:Button ID="Button1" runat="server" Text="Register" ValidationGroup="vg" OnClick="Button1_Click" />
     <br />
