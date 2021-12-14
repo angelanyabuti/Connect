@@ -6,8 +6,24 @@
 <head runat="server">
     <title></title>
     
+    <link href="Master.css" rel="stylesheet" type="text/css" />
+    
 </head>
 <body>
+    <div class="header">
+
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQS</a></li>
+
+                <li><a href="Login.aspx">Login</a></li>
+                <li><a href="CreateAccount.aspx">Create Account</a></li>
+            </ul>
+    </div>
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
