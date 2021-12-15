@@ -1,3 +1,8 @@
 ﻿body {
-    align-content:center;
+    align-content: center;
+    background-color:gainsboro;
+}
+.panel
+{
+    float:right;
 }

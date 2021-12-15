@@ -26,7 +26,7 @@ namespace Connect
            
             //writing sql query
 
-            SqlCommand cmd = new SqlCommand("insert into Employee (EmpId, Full_names, Email, Mobile_no, Address, Date_of_Join,Department) values('" + txtEid.Text + "','" + txtFnames.Text + "', '" + txtEmail.Text + "', '" + txtEnumber.Text + "','" + txtAddress.Text + "' ,'"+ txtDjoin.Text + "','" + txtDep.Text + "')", con);
+            SqlCommand cmd = new SqlCommand("insert into Employee (EmpId, Full_names, Email, Mobile_no, Address, Date_of_Join,Department, Basic_salary, Tax, Net_pay, Gross_pay, Deductions, Overtime) values('" + txtEid.Text + "','" + txtFnames.Text + "', '" + txtEmail.Text + "', '" + txtEnumber.Text + "','" + txtAddress.Text + "' ,'"+ txtDjoin.Text + "','" + txtDep.Text + "', '" + txtBsalary.Text + "', '" + txtTax.Text + "', '" + txtNpay.Text + "', '" + txtGpay.Text + "', '" + txtDeductions.Text + "', '" + txtOtime.Text + "')", con);
 
             // Opening Connection
             con.Open();
@@ -98,6 +98,27 @@ namespace Connect
             GridView1.DataSource = dt;
             GridView1.DataBind();
         }
-        
+
+        protected void txtGpay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            double gross, deductions, net, basic, tax, overtime;
+
+            basic = Double.Parse(txtBsalary.Text);
+            overtime = Double.Parse(txtOtime.Text);
+            gross = basic + overtime;
+            txtGpay.Text = string.Format("{0:C0}", gross);
+            tax = (gross * 10) / 100;
+           // txtTax.Text = string.Format("{0:C0}", tax);
+            deductions = tax;
+           // txtDeductions.Text = string.Format("{0:C0}", deductions);
+            net = gross - deductions;
+           // txtNpay.Text = string.Format("{0:C0}", net);
+
+        }
     }
 }

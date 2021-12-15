@@ -1,0 +1,17 @@
+﻿body {
+    color:aqua;
+    background-color:
+}
+
+.label, .textbox {
+    width: 100%;
+}
+
+.textbox {
+    border: 1px solid gold;
+    border-radius: 5px;
+}
+
+.button {
+   
+}
