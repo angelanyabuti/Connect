@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Connect.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Connect.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="Login.css" rel="stylesheet" type="text/css" />
+    <link href="Employee.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
@@ -12,7 +12,7 @@
     <br />
     <br />
     <br />
-    <asp:Panel ID="Panel2" runat="server" Height="170px" HorizontalAlign="Center" style="margin-left: 365px" Width="585px">
+    <asp:Panel ID="Panel2" runat="server" Height="271px" HorizontalAlign="Center" style="margin-left: 365px" Width="585px">
         <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
         <br />
         <asp:TextBox ID="txtUname" runat="server"></asp:TextBox>
@@ -20,12 +20,14 @@
         <br />
         <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
         <br />
-        <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
         <br />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="vg" />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Login" ValidationGroup="vg" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" ValidationGroup="vg" />
+        <br />
+        <br />
     </asp:Panel>
     <br />
     <br />

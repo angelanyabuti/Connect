@@ -3,7 +3,7 @@
     <link href="Employee.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<p>
+    <p>
 
     &nbsp;</p>
     <p>
@@ -58,22 +58,18 @@
         <asp:Label ID="Label10" runat="server" Text="Tax"></asp:Label>
         <br />
         <asp:TextBox ID="txtTax" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtTax" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
         <br />
         <asp:Label ID="Label11" runat="server" Text="Net pay"></asp:Label>
         <br />
         <asp:TextBox ID="txtNpay" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtNpay" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
         <br />
         <asp:Label ID="lblgpay" runat="server" Text="Gross pay"></asp:Label>
         <br />
         <asp:TextBox ID="txtGpay" runat="server" OnTextChanged="txtGpay_TextChanged"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtGpay" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
         <br />
         <asp:Label ID="Label13" runat="server" Text="Deductions"></asp:Label>
         <br />
         <asp:TextBox ID="txtDeductions" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="txtDeductions" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
         <br />
         <asp:Label ID="Label15" runat="server" Text="Overtime"></asp:Label>
         <br />
@@ -99,12 +95,14 @@
         <asp:GridView ID="GridView1" runat="server" BackColor="White">
         </asp:GridView>
     <br />
-    <asp:Panel ID="Panel3" runat="server" BackColor="White" HorizontalAlign="Center" style="margin-left: 371px" Width="549px">
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add" ValidationGroup="vg" />
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Update" />
-        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" onClientClick="return confirm('are you sure you want to delete?');" Text="Delete" />
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Search" />
-    </asp:Panel>
+<asp:Panel ID="Panel3" runat="server" BackColor="White" HorizontalAlign="Center" style="margin-left: 371px" Width="549px">
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add" ValidationGroup="vg" />
+    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Update" />
+    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" onClientClick="return confirm('are you sure you want to delete?');" Text="Delete" />
+    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Search" />
+    <asp:Button ID="Button7" runat="server" OnClick="Button7_click" Text="Clear" />
+    <asp:Button ID="Button6" runat="server" OnClick="Button6_click" Text="Logout" />
+</asp:Panel>
     <br />
     <p>
         &nbsp;</p>

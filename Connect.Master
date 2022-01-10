@@ -16,10 +16,8 @@
     </div>
     <div class="nav">
         <ul>
-            <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
+            <li><a href="Home.aspx">Home</a></li>
                         <li><a href="EmployeeDetails.aspx">Employees</a></li>
-                        <li><a href="#">FAQS</a></li>
 
                 <li><a href="Login.aspx">Login</a></li>
                 <li><a href="Register.aspx">Create Account</a></li>

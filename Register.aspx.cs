@@ -37,7 +37,8 @@ namespace Connect
             //Executing the SQL query
             cmd.ExecuteNonQuery();
                 {
-                Console.WriteLine("Registration successful");
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Successfully inserted');", true);
+
             }
             // Closing the connection
             conn.Close();

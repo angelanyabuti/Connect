@@ -1,4 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Connect.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Connect.Register" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <link href="Employee.css" rel="stylesheet" type="text/css" />
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
     <br />
@@ -37,12 +41,12 @@
         <br />
         <asp:Label ID="Label6" runat="server" Text="Password"></asp:Label>
         <br />
-        <asp:TextBox ID="txtPassword" runat="server" Width="180px"></asp:TextBox>
+        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="180px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPassword" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
         <br />
         <asp:Label ID="Label7" runat="server" Text="Confirm password"></asp:Label>
         <br />
-        <asp:TextBox ID="txtCPassword" runat="server" Width="185px"></asp:TextBox>
+        <asp:TextBox ID="txtCPassword" runat="server" TextMode="Password" Width="185px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtCPassword" ErrorMessage="This field is required" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtCPassword" ErrorMessage="Enter the correct password" ForeColor="Red" ValidationGroup="vg">*</asp:CompareValidator>
         <br />

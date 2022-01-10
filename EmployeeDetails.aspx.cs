@@ -49,6 +49,7 @@ namespace Connect
             GridView1.DataSource = dt;
             GridView1.DataBind();
         }
+        //update button
         protected void Button2_Click(object sender, EventArgs e)
         {
             //writing sql query
@@ -67,7 +68,7 @@ namespace Connect
 
             LoadRecord();
         }
-
+        //delete button
         protected void Button3_Click(object sender, EventArgs e)
         {
             //writing sql query
@@ -113,11 +114,45 @@ namespace Connect
             gross = basic + overtime;
             txtGpay.Text = string.Format("{0:C0}", gross);
             tax = (gross * 10) / 100;
-           // txtTax.Text = string.Format("{0:C0}", tax);
+            txtTax.Text = string.Format("{0:C0}", tax);
             deductions = tax;
-           // txtDeductions.Text = string.Format("{0:C0}", deductions);
+            txtDeductions.Text = string.Format("{0:C0}", deductions);
             net = gross - deductions;
-           // txtNpay.Text = string.Format("{0:C0}", net);
+            txtNpay.Text = string.Format("{0:C0}", net);
+
+        }
+        //logout button
+        protected void Button6_click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
+
+        }
+        //button to clear the textboxes
+        protected void Button7_click(object sender, EventArgs e)
+        {
+            txtAddress.Text = string.Empty;
+            txtBsalary.Text = string.Empty;
+            txtDeductions.Text = string.Empty;
+            txtDep.Text = string.Empty;
+            txtDjoin.Text = string.Empty;
+            txtEid.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtEnumber.Text = string.Empty;
+            txtFnames.Text = string.Empty;
+            txtGpay.Text = string.Empty;
+            txtNpay.Text = string.Empty;
+            txtOtime.Text = string.Empty;
+            txtPdate.Text = string.Empty;
+            txtTax.Text = string.Empty;
+
+
+
+
+
+
+
+
+
 
         }
     }
