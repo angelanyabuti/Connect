@@ -34,6 +34,8 @@
     <asp:TextBox ID="txtCpassword" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtCpassword" ErrorMessage="Confirm your passwrod" ForeColor="Red" ValidationGroup="vg">*</asp:RequiredFieldValidator>
     <br />
+    <asp:Button ID="Button1" runat="server" Text="Register" ValidationGroup="vg" />
+    <br />
     <br />
     <br />
     <br />
