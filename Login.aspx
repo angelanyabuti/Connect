@@ -13,6 +13,13 @@
     <br />
     <br />
     <asp:Panel ID="Panel2" runat="server" Height="271px" HorizontalAlign="Center" style="margin-left: 365px" Width="585px">
+        <br />
+        
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
         <br />
         <asp:TextBox ID="txtUname" runat="server"></asp:TextBox>
@@ -29,6 +36,8 @@
         <br />
         <br />
     </asp:Panel>
+    <asp:Login ID="Login1" runat="server" DestinationPageUrl="~/EmployeeDetails.aspx">
+    </asp:Login>
     <br />
     <br />
     <br />
